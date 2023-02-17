@@ -1,19 +1,34 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@600&family=Sarala&display=swap');
+@import url('https://fonts.cdnfonts.com/css/gotham');
+
+/* .cabecalho::selection{
+    background-color: #ffe45c;
+    color: #242424;
+} */
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
+    font-family: 'Gotham', sans-serif;
 }
 
-body,main::selection {
-    font-size: 100%;
-    background-image: linear-gradient(45deg, rgb(0, 0, 0), rgba(0, 0, 0, 0)), url(img1.jpg);
+header{
+    position: absolute;
+    z-index: 9999;
+    background: rgba(39,39,39,.6);
+    top: 0;
+    left: 0;
+    width: 100%;
+    backdrop-filter: blur(6px);
+}
+
+body main{
+    background-image: url(img1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: fixed;
 }
+
 
 .cabecalho {
     background-color: transparent;
@@ -21,29 +36,30 @@ body,main::selection {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
-    padding: 30px;
+    justify-content: space-between;
+    padding: 20px;
 }
 
-.cabecalho::selection{
-    background-color: #ffe45c;
-    color: #242424;
-}
+.cabecalho-imagem{
+    padding-left: 40px;
 
-.cabecalho-imagem {
-    height: 50px;
 }
 
 .cabecalho-menu {
+    padding: 0;
     display: flex;
-    gap: 120px;
+    align-items: center;
+    gap: 40px;
+
 }
 
 .cabecalho-menu-item {
-    font-family: 'Sarala', sans-serif;
+    font-family: 'Gotham', sans-serif;
+    display: flex;
     color: #FFFFFF;
-    font-weight: 700;
-    font-size: 18px;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1em;
 }
 
 .cabecalho-menu-item:hover{
@@ -53,36 +69,36 @@ body,main::selection {
 }
 
 .cabecalho-menu-item-botao{
-    background-color: #FFFFFF;
-    width: 200px;
-    height: 36px;
+    background-color: #c44148;
+    width: 250px;
+    height: 48px;
     border: none;
     box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 40px;
-    font-family: 'Sarala', sans-serif;
-    font-weight: 700;
-    font-size: 20px;
-    color: #000000;
+    border-radius: 8px;
+    font-family: 'Gotham', sans-serif;
+    font-weight: 500;
+    font-size: 1.3em;
+    color: white;
 }
 
 .cabecalho-menu-item-botao:hover {
-    background-color: #c44148;
-    font-family: 'Sarala', sans-serif;
-    font-weight: 700;
-    font-size: 20px;
-    color: #ffffff;
+    background-color: #FFFFFF;
+    font-family: 'Gotham', sans-serif;
+    font-weight: 500;
+    font-size: 1.3em;
+    color: black;
     transform: translate(-3px, -3px);
     transition: transform .5s;
 }
 
 .conteudo {
     margin-bottom: 20px;
-    border-top: 0.6px solid #000000;
 }
 
 .conteudo-principal {
-    padding-top: 100px;
-    padding-left: 165px;
+    padding-top: 12em;
+    padding-left: 3.5em;
+    padding-bottom: 4em;
     display: flex;
     flex-direction: row;
     justify-content: left;
@@ -96,39 +112,31 @@ gap: 48px;
 }
 
 .conteudo-principal-escrito-titulo {
-    font-family: 'Montserrat Alternates', sans-serif;
+    font-family: 'Gotham', sans-serif;
     padding-left: 5px;
-    font-weight: 400;
-    font-size: 48px;
+    font-weight: 200;
+    font-size: 46px;
     color: #FFFFFF;
 }
 
-.conteudo-principal-escrito-titulo::selection{
-    background-color: #ffe45c;
-    color: #242424;
-}
 
 .conteudo-principal-escrito-subtitulo {
-    font-family: 'Sarala', sans-serif;
+    font-family: 'Gotham', sans-serif;
     padding-left: 5px;
-    font-weight: 400;
+    font-weight: 200;
     font-size: 26px;
     color: #FFFFFF;
 }
 
-.conteudo-principal-escrito-subtitulo::selection{
-    background-color: #ffe45c;
-    color: #242424;
-}
 
 .conteudo-principal-botao{
-    background-color: #c44148;
-    width: 410px;
-    height: 80px;
+    background-image: linear-gradient(90deg, rgb(242, 92, 132), rgb(140, 7, 43));
+    width: 310px;
+    height: 60px;
     border: none;
     box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 40px;
-    font-family: 'Sarala', sans-serif;
+    border-radius: 10px;
+    font-family: 'Gotham', sans-serif;
     font-weight: 400;
     font-size: 24px;
     color: #FFFFFF;
@@ -136,7 +144,7 @@ gap: 48px;
 
 .conteudo-principal-botao:hover {
     background-color: rgb(255, 255, 255);
-    font-family: 'Sarala', sans-serif;
+    font-family: 'Gotham', sans-serif;
     font-weight: 700;
     font-size: 24px;
     color: #000000;
@@ -144,67 +152,28 @@ gap: 48px;
     transition: transform .5s;
 }
 
-.marca{
-    padding: 0;
-    margin-top: 100px;
-    background-color: #c44148;
-    color: white;
-    font-family: 'Sarala', sans-serif;
-    text-align: center;
-    box-shadow: 2px 2px 8px black;
-}
-
-.marca::selection{
-    background-color: #ffe45c;
-    color: #242424;
-}
-
-.marca2{
-    font-family: 'Serala', sans-serif;
-    font-size: 18px;
+.beneficios{
     display: flex;
-    justify-content: center;
-    color: white;
-    text-align: center;
-    border: 1px solid white;
-    background-color: rgba(0, 0, 0, 0.801);
-    border-radius: 30px;
-    padding: 20px;
-    max-width: 500px;
-    margin: auto;
-    margin-top: 40px;
-}
-
-.marca2::selection{
-    background-color: #ffe45c;
-    color: #242424;
-}
-
-.marca2:hover{
-    transform: translate(-3px, -3px);
-    transition: transform .5s
-}
-.container{
-    display: flex;
-    margin-top: 70px;
-    height: 50vh;
+    padding: 60px 60px;
+    background-color: #fff;
     justify-content: space-around;
-    background-color: #00000083;
-  }
-  
-  .accordion{
-    margin: 20px;
-    padding: 0px;
-    flex: 1;
-    border: transparent;
-    border-radius: 20px;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    transition: all 600ms cubic-bezier(0.075, 0.82, 0.165, 1);
-  }
-  
-  .accordion:hover{
-    flex-basis: 65vh;
-    border: 1px solid white;
-  }
+}
+
+.icones{
+    padding-inline: 150px
+}
+
+.portfolio{
+    font-size: 2.2em;
+    font-weight: 700;
+    line-height: 1.2em;
+    text-align: center;
+    margin-bottom: 15px;
+    padding-top: 1.5em;
+}
+
+.portfolio-desc{
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: 400;
+}
